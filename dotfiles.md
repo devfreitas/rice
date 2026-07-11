@@ -1,8 +1,6 @@
 # Meu Backup de Dotfiles (Noctalia + Niri)
 
-Este arquivo contém as configurações para o Niri, Noctalia e possivelmente outros programas relacionados (Ghostty, Quickshell).
-
-Você pode usar essas configurações no seu novo Arch Linux.
+Este arquivo contém as configurações para o Niri, Noctalia e outros programas relacionados (Ghostty, Quickshell).
 
 ## `~/.config/niri/config.kdl`
 
