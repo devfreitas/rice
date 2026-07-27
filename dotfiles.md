@@ -1,6 +1,6 @@
-# Meu Backup de Dotfiles (Noctalia + Niri)
+# My Dotfiles Backup (Noctalia + Niri)
 
-Este arquivo contém as configurações para o Niri, Noctalia e outros programas relacionados (Ghostty, Quickshell).
+This file contains the configurations for Niri, Noctalia, and other related programs (Ghostty, Quickshell).
 
 ## `~/.config/niri/config.kdl`
 
@@ -2037,7 +2037,7 @@ ColumnLayout {
 }
 ```
 
-<!-- Não foi possível ler /home/freitas/.config/noctalia/plugins/catwalk/preview.png: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte -->
+<!-- Could not read /home/freitas/.config/noctalia/plugins/catwalk/preview.png: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte -->
 
 ## `~/.config/noctalia/plugins/catwalk/i18n/de.json`
 
@@ -3928,7 +3928,7 @@ ColumnLayout {
 }
 ```
 
-<!-- Não foi possível ler /home/freitas/.config/noctalia/plugins/pomodoro/alarm.mp3: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte -->
+<!-- Could not read /home/freitas/.config/noctalia/plugins/pomodoro/alarm.mp3: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte -->
 
 ## `~/.config/noctalia/plugins/pomodoro/manifest.json`
 
@@ -3968,7 +3968,7 @@ ColumnLayout {
 }
 ```
 
-<!-- Não foi possível ler /home/freitas/.config/noctalia/plugins/pomodoro/preview.png: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte -->
+<!-- Could not read /home/freitas/.config/noctalia/plugins/pomodoro/preview.png: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte -->
 
 ## `~/.config/noctalia/plugins/pomodoro/i18n/de.json`
 
@@ -4861,4 +4861,7 @@ ColumnLayout {
 ```ghostty
 
 ```
+
+
+## Table of Contents
 

@@ -61,7 +61,7 @@ content = f.read()
 
 # Regular expression to locate files and code blocks
 # Looks for: ## `~/.config/...` followed by the block ``` ... ```
-pattern = re.compile(r'##\s*`([^`]+)`\s*\n+```[a-z]*\n(.*?)```', re.DOTALL)
+pattern = re.compile(r'##\s*`([^`]+)`.*?```[a-z]*\n(.*?)```', re.DOTALL)
 
 matches = pattern.findall(content)
 
