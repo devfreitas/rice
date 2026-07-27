@@ -1,13 +1,12 @@
+# Installiton Arch + Niri + Noctalia + Dotfiles
 
 #!/bin/bash
 
-echo "=================================================="
-echo " Instalador Niri + Noctalia + Dotfiles (Arch Minimal)"
-echo "=================================================="
+echo " Installation Niri + Noctalia + Dotfiles (at a Arch Minimal)"
 
-# 1. Verificar e instalar um AUR helper (yay) se não estiver presente
+# 1. Check for and install an AUR helper (yay) if it is not present.
 if ! command -v yay &> /dev/null; then
-    echo "[+] 'yay' não encontrado. Instalando..."
+    echo "[+] 'yay' not found. Installing..."
     sudo pacman -S --needed --noconfirm git base-devel
     git clone https://aur.archlinux.org/yay.git /tmp/yay
     cd /tmp/yay
@@ -16,15 +15,15 @@ if ! command -v yay &> /dev/null; then
     rm -rf /tmp/yay
 fi
 
-# 2. Instalar pacotes essenciais e dependências citadas nos seus dotfiles
-echo "[+] Instalando pacotes e dependências..."
-# - niri: Compositor Wayland
-# - noctalia: O desktop shell (barras, launcher, etc)
-# - ghostty, alacritty: Terminais citados na configuração
-# - zen-browser-bin, nautilus: Navegador e gerenciador de arquivos
-# - polkit-gnome: Agente de autenticação
-# - playerctl, brightnessctl, wireplumber, pavucontrol: Controles de mídia e sistema
-# - wl-clipboard, cliphist: Área de transferência
+# 2. Install essential packages and dependencies listed in your dotfiles
+echo "[+] Installing packages and dependencies..."
+# - niri: Wayland compositor
+# - noctalia: Desktop shell (bars, launcher, etc.)
+# - ghostty, alacritty: Terminals mentioned in the configuration
+# - zen-browser-bin, nautilus: Web browser and file manager
+# - polkit-gnome: Authentication agent
+# - playerctl, brightnessctl, wireplumber, pavucontrol: Media and system controls
+# - wl-clipboard, cliphist: Clipboard
 
 yay -S --needed --noconfirm \
     niri \
@@ -44,49 +43,47 @@ yay -S --needed --noconfirm \
 
 # 3. Preparar diretórios para os dotfiles
 echo "[+] Preparando diretórios do Niri e Noctalia..."
-rm -rf ~/.config/niri
-rm -rf ~/.config/noctalia
 mkdir -p ~/.config/niri
 mkdir -p ~/.config/noctalia
 
-# 4. Baixar o arquivo markdown com os dotfiles
-echo "[+] Baixando configurações do GitHub..."
+# 4. Download the markdown file containing the dotfiles
+echo "[+] Downloading configurations from GitHub..."
 curl -sL "https://raw.githubusercontent.com/devfreitas/rice/main/dotfiles.md" -o /tmp/dotfiles.md
-
-# 5. Extrair e criar os arquivos de configuração usando Python
-echo "[+] Extraindo os arquivos de configuração..."
+# 5. Extract and create configuration files using Python
+echo "[+] Extracting configuration files..."
 python3 - << 'EOF'
 import re
 from pathlib import Path
 
-# Lê o markdown baixado
+# Read the downloaded markdown
 with open('/tmp/dotfiles.md', 'r', encoding='utf-8') as f:
-    content = f.read()
+content = f.read()
 
-# Expressão regular para localizar arquivos e blocos de código
-# Procura por: ## `~/.config/...` seguido do bloco ``` ... ```
+# Regular expression to locate files and code blocks
+# Looks for: ## `~/.config/...` followed by the block ``` ... ```
 pattern = re.compile(r'##\s*`([^`]+)`\s*\n+```[a-z]*\n(.*?)```', re.DOTALL)
 
 matches = pattern.findall(content)
 
 if not matches:
-    print("[-] Nenhum arquivo de configuração encontrado no markdown!")
+print("[-] No configuration files found in the markdown!")
 else:
-    for filepath, code in matches:
-        # Expande o "~" para o diretório real do usuário (/home/usuario/...)
-        full_path = Path(filepath).expanduser()
+for filepath, code in matches:
+# Expand "~" to the actual user directory (/home/user/...)
+full_path = Path(filepath).expanduser()
 
-        # Cria os diretórios necessários (se não existirem)
-        full_path.parent.mkdir(parents=True, exist_ok=True)
+# Create necessary directories (if they don't exist)
+full_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Salva o arquivo com o conteúdo do bloco de código
-        with open(full_path, 'w', encoding='utf-8') as f:
-            f.write(code.strip() + '\n')
-        print(f"  -> Gerado: {full_path}")
+# Save the file with the code block content
+with open(full_path, 'w', encoding='utf-8') as f:
+f.write(code.strip() + '\n')
+print(f"  -> Generated: {full_path}")
 EOF
 
 echo "=================================================="
-echo " Instalação concluída com sucesso!"
-echo " Faça logout e selecione o 'Niri' no seu gerenciador de login,"
-echo " ou inicie diretamente pelo TTY executando o comando: niri-session"
-echo "=================================================="
+echo " Installation completed successfully!"
+echo " Log out and select 'Niri' in your login manager,"
+echo " or start directly from the TTY by running the command: niri-session"
+
+# By DevFreitas
