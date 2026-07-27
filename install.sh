@@ -46,17 +46,14 @@ echo "[+] Preparando diretórios do Niri e Noctalia..."
 mkdir -p ~/.config/niri
 mkdir -p ~/.config/noctalia
 
-# 4. Download the markdown file containing the dotfiles
-echo "[+] Downloading configurations from GitHub..."
-curl -sL "https://raw.githubusercontent.com/devfreitas/rice/main/dotfiles.md" -o /tmp/dotfiles.md
-# 5. Extract and create configuration files using Python
-echo "[+] Extracting configuration files..."
+# 4. Extract and create configuration files using Python
+echo "[+] Extracting configuration files from local dotfiles.md..."
 python3 - << 'EOF'
 import re
 from pathlib import Path
 
-# Read the downloaded markdown
-with open('/tmp/dotfiles.md', 'r', encoding='utf-8') as f:
+# Read the local markdown
+with open('dotfiles.md', 'r', encoding='utf-8') as f:
 content = f.read()
 
 # Regular expression to locate files and code blocks
