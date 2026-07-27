@@ -1,6 +1,6 @@
-# Installiton Arch + Niri + Noctalia + Dotfiles
-
 #!/bin/bash
+
+# Installation Arch + Niri + Noctalia + Dotfiles
 
 echo " Installation Niri + Noctalia + Dotfiles (at a Arch Minimal)"
 
@@ -54,7 +54,7 @@ from pathlib import Path
 
 # Read the local markdown
 with open('dotfiles.md', 'r', encoding='utf-8') as f:
-content = f.read()
+    content = f.read()
 
 # Regular expression to locate files and code blocks
 # Looks for: ## `~/.config/...` followed by the block ``` ... ```
@@ -63,19 +63,19 @@ pattern = re.compile(r'##\s*`([^`]+)`.*?```[a-z]*\n(.*?)```', re.DOTALL)
 matches = pattern.findall(content)
 
 if not matches:
-print("[-] No configuration files found in the markdown!")
+    print("[-] No configuration files found in the markdown!")
 else:
-for filepath, code in matches:
-# Expand "~" to the actual user directory (/home/user/...)
-full_path = Path(filepath).expanduser()
+    for filepath, code in matches:
+        # Expand "~" to the actual user directory (/home/user/...)
+        full_path = Path(filepath).expanduser()
 
-# Create necessary directories (if they don't exist)
-full_path.parent.mkdir(parents=True, exist_ok=True)
+        # Create necessary directories (if they don't exist)
+        full_path.parent.mkdir(parents=True, exist_ok=True)
 
-# Save the file with the code block content
-with open(full_path, 'w', encoding='utf-8') as f:
-f.write(code.strip() + '\n')
-print(f"  -> Generated: {full_path}")
+        # Save the file with the code block content
+        with open(full_path, 'w', encoding='utf-8') as f:
+            f.write(code.strip() + '\n')
+        print(f"  -> Generated: {full_path}")
 EOF
 
 echo "=================================================="
