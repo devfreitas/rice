@@ -28,7 +28,7 @@ echo "[+] Instalando pacotes e dependências..."
 
 yay -S --needed --noconfirm \
     niri \
-    noctalia \
+    noctalia-qs \
     polkit-gnome \
     playerctl \
     brightnessctl \
@@ -44,6 +44,8 @@ yay -S --needed --noconfirm \
 
 # 3. Preparar diretórios para os dotfiles
 echo "[+] Preparando diretórios do Niri e Noctalia..."
+rm -rf ~/.config/niri
+rm -rf ~/.config/noctalia
 mkdir -p ~/.config/niri
 mkdir -p ~/.config/noctalia
 
