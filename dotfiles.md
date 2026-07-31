@@ -31,16 +31,8 @@ layer-rule {
 input {
     keyboard {
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
+            layout "br"
+            model "abnt2"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -257,7 +249,7 @@ layout {
     struts {
         // left 64
         // right 64
-        // top 64
+        top -15
         // bottom 64
     }
 }
@@ -279,6 +271,7 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 environment {
     XCURSOR_THEME "Adwaita"
     XCURSOR_SIZE "24"
+    // GTK_IM_MODULE "simple"
 }
 
 cursor {
@@ -354,7 +347,7 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
-    opacity 0.90
+    opacity 1.0
 
   }
 
@@ -376,7 +369,7 @@ binds {
     }
 
     // Custom App Shortcuts
-    Mod+B { spawn "zen-browser" ; }
+    Mod+B { spawn "firefox" ; }
     Mod+E { spawn "nautilus" ; }
 
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -394,7 +387,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -656,8 +649,8 @@ binds {
 
 // Reduced blur for increased visibility
 blur {
-    passes 1
-    offset 1.0
+    passes 0
+    offset 0.0
 }
 
 include "./noctalia.kdl"
@@ -751,14 +744,19 @@ recent-windows {
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
-            "code",
             "sqldeveloper",
-            "obsidian",
-            "com.mitchellh.ghostty",
             "eclipse",
-            "org.gnome.Nautilus",
             "zen",
-            "com.valvesoftware.SteamLink"
+            "com.valvesoftware.SteamLink",
+            "dev.zed.Zed",
+            "code",
+            "spotify",
+            "postman",
+            "obsidian",
+            "kitty",
+            "jetbrains-idea",
+            "firefox",
+            "org.gnome.Nautilus"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -787,13 +785,13 @@ recent-windows {
         "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 2,
+        "contentPadding": 6,
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": false,
-        "fontScale": 1.2000000000000002,
+        "fontScale": 1.4,
         "frameRadius": 12,
-        "frameThickness": 8,
+        "frameThickness": 12,
         "hideOnOverview": false,
         "marginHorizontal": 216,
         "marginVertical": 5,
@@ -828,12 +826,12 @@ recent-windows {
                 },
                 {
                     "clockColor": "none",
-                    "customFont": "JetBrainsMono Nerd Font",
+                    "customFont": "Maple Mono",
                     "formatHorizontal": "HH:mm ddd d",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": true
+                    "useCustomFont": false
                 }
             ],
             "left": [
@@ -857,7 +855,7 @@ recent-windows {
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
-                    "iconScale": 0.8,
+                    "iconScale": 1.0,
                     "id": "Workspace",
                     "labelMode": "index",
                     "occupiedColor": "secondary",
@@ -1376,9 +1374,9 @@ recent-windows {
     },
     "ui": {
         "boxBorderEnabled": true,
-        "fontDefault": "JetBrainsMono Nerd Font",
+        "fontDefault": "Maple Mono",
         "fontDefaultScale": 1,
-        "fontFixed": "JetBrainsMono Nerd Font Mono",
+        "fontFixed": "Maple Mono",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,
@@ -1390,7 +1388,7 @@ recent-windows {
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/freitas/Pictures/Wallpapers",
+        "directory": "/home/rafael/Imagens/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -3583,7 +3581,6 @@ Item {
     }
   }
 }
-
 ```
 
 ## `~/.config/noctalia/plugins/pomodoro/README.md`
