@@ -93,3 +93,7 @@ If you want to change any of the default shortcuts (for example, if you prefer `
 ### Thank You! ❤️
 
 Thank you so much for using my dotfiles and checking out this rice! I hope it makes your Linux experience smoother, more aesthetic, and productive. If you like this project, consider giving it a ⭐ on GitHub, and feel free to open an issue or pull request if you have any ideas to improve it. Happy ricing!
+
+---
+
+> I changed some things, so I'll update later
