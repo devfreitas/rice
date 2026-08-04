@@ -29,7 +29,7 @@ The repository includes a convenient installation script that automates the enti
 
 ---
 
-## How It Works (Post-Installation)
+## How It Works
 
 Once installed, you can start the environment by logging out and selecting **Niri** from your Display Manager (like GDM, SDDM or Ly), or by typing `niri-session` directly from the TTY.
 
