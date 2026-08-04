@@ -1,6 +1,6 @@
 # DevFreitas' Rice (Niri + Noctalia)  🍚
 
-A professional, aesthetic, and highly customized dotfiles setup for **Arch Linux** featuring **Niri** (a scrollable-tiling Wayland compositor) and **Noctalia** (a versatile desktop shell/bar). 
+A aesthetic and highly customized dotfiles setup for **Arch Linux** featuring **Niri** (a scrollable-tiling Wayland compositor) and **Noctalia** (a versatile desktop shell/bar). 
 
 ## Installation
 
