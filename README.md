@@ -41,19 +41,6 @@ Here is a breakdown of the core components and how they function:
 - **Quickshell:** The underlying declarative framework used by Noctalia to render QML-based UI elements efficiently.
 
 
-## Wallpapers
-
-A collection of beautiful wallpapers is included in this setup. Here is a preview of the included backgrounds:
-
-| | | |
-|:---:|:---:|:---:|
-| <img src="Wallpapers/BushTree.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_blue_and_white_dots.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_blueprint_of_a_cassette_tape.png" width="300" height="170" style="object-fit: cover;" /> |
-| <img src="Wallpapers/a_book_and_coffee_on_a_table.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_close_up_of_a_fern.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_computer_room_with_a_desk_and_a_computer_monitor.jpg" width="300" height="170" style="object-fit: cover;" /> |
-| <img src="Wallpapers/a_group_of_tall_buildings_with_cartoon_characters_on_them.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_group_of_tall_buildings_with_fog.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_large_rock_in_the_middle_of_a_body_of_water.png" width="300" height="170" style="object-fit: cover;" /> |
-| <img src="Wallpapers/a_screenshot_of_a_video_game.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/b-783.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/car-girl-white.png" width="300" height="170" style="object-fit: cover;" /> |
-| <img src="Wallpapers/forest-4.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/ign-waifu.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/od_fuck_u_nvidia_grey.png" width="300" height="170" style="object-fit: cover;" /> |
-
----
 
 ## Keybindings
 
@@ -86,7 +73,17 @@ If you want to change any of the default shortcuts (for example, if you prefer `
 
 ---
 
-> Enjoy the rice! Feel free to modify and tweak it further to fit your exact needs.
+## Wallpapers
+
+A collection of beautiful wallpapers is included in this setup. Here is a preview of the included backgrounds:
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="Wallpapers/BushTree.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_blue_and_white_dots.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_blueprint_of_a_cassette_tape.png" width="300" height="170" style="object-fit: cover;" /> |
+| <img src="Wallpapers/a_book_and_coffee_on_a_table.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_close_up_of_a_fern.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_computer_room_with_a_desk_and_a_computer_monitor.jpg" width="300" height="170" style="object-fit: cover;" /> |
+| <img src="Wallpapers/a_group_of_tall_buildings_with_cartoon_characters_on_them.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_group_of_tall_buildings_with_fog.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/a_large_rock_in_the_middle_of_a_body_of_water.png" width="300" height="170" style="object-fit: cover;" /> |
+| <img src="Wallpapers/a_screenshot_of_a_video_game.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/b-783.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/car-girl-white.png" width="300" height="170" style="object-fit: cover;" /> |
+| <img src="Wallpapers/forest-4.jpg" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/ign-waifu.png" width="300" height="170" style="object-fit: cover;" /> | <img src="Wallpapers/od_fuck_u_nvidia_grey.png" width="300" height="170" style="object-fit: cover;" /> |
 
 ---
 
@@ -96,5 +93,7 @@ Thank you so much for using my dotfiles and checking out this rice! I hope it ma
 
 ---
 
-> I changed some things, so I'll update later
-> 1. art.png is my image in fastfetch
+> I changed some things, so I'll update later!
+>  art.png is my image in fastfetch.
+
+>  *Enjoy the rice! Feel free to modify and tweak it further to fit your exact needs.*
