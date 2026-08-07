@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Installation Arch + Niri + Noctalia + Dotfiles
+# Installation Arch + Niri + Noctalia + Dotfiles.
 
 echo " Installation Niri + Noctalia + Dotfiles (at a Arch Minimal)"
 
@@ -15,7 +15,7 @@ if ! command -v yay &> /dev/null; then
     rm -rf /tmp/yay
 fi
 
-# 2. Install essential packages and dependencies listed in your dotfiles
+# 2. Install essential packages and dependencies listed in 'dotfiles.md'
 echo "[+] Installing packages and dependencies..."
 # - niri: Wayland compositor
 # - noctalia: Desktop shell (bars, launcher, etc.)
@@ -41,12 +41,12 @@ yay -S --needed --noconfirm \
     zen-browser-bin \
     python
 
-# 3. Preparar diretórios para os dotfiles
-echo "[+] Preparando diretórios do Niri e Noctalia..."
+# 3. Preparing directories for dotfiles.
+echo "[+] Preparing Niri and Noctalia directories..."
 mkdir -p ~/.config/niri
 mkdir -p ~/.config/noctalia
 
-# 4. Extract and create configuration files using Python
+# 4. Extract and create configuration files using Python.
 echo "[+] Extracting configuration files from local dotfiles.md..."
 python3 - << 'EOF'
 import re
@@ -78,7 +78,7 @@ else:
         print(f"  -> Generated: {full_path}")
 EOF
 
-echo "=================================================="
+echo "------------------------------"
 echo " Installation completed successfully!"
 echo " Log out and select 'Niri' in your login manager,"
 echo " or start directly from the TTY by running the command: niri-session"
