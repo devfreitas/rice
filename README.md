@@ -93,7 +93,4 @@ Thank you so much for using my dotfiles and checking out this rice! I hope it ma
 
 ---
 
-> I changed some things, so I'll update later!
->  art.png is my image in fastfetch.
-
 >  *Enjoy the rice! Feel free to modify and tweak it further to fit your exact needs.*
